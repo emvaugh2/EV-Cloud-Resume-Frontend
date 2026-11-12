@@ -1,0 +1,332 @@
+/* =========================================
+   Edward Vaughn - Azure Cloud Resume
+   ========================================= */
+:root {
+    --bg: #08111f;
+    --surface: #0d1a2d;
+    --surface-light: #11233b;
+    --text: #edf5ff;
+    --muted: #9fb2c8;
+    --accent: #45a9ff;
+    --accent-light: #7dd3fc;
+    --border: rgba(148, 184, 220, 0.18);
+    --shadow:
+        0 18px 60px rgba(0, 0, 0, 0.22);
+    --max-width: 1120px;
+}
+/* =========================================
+   Global
+   ========================================= */
+* {
+    box-sizing: border-box;*}
+html {
+    scroll-behavior: sm*oth;
+}
+body {
+    margin: 0;
+    font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    background:
+        radial-gradient(
+            circle at 15% 0%,
+            rgba(0, 120, 212, 0.16),
+            transparent 32rem
+        ),
+        var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+}
+.container {
+    width: min(
+        calc(100% - 2rem),
+        var(--max-width)
+    );
+    margin: 0 auto;
+}
+/* =========================================
+   Header
+   ========================================= */
+.hero {
+    padding: 5.5rem 0 4*em;
+    border-bottom:
+        1p* solid var(--border);
+}
+.hero-co*tent,
+.role-heading,
+.footer-conte*t {
+    display: flex;
+    justif*-content: space-between;
+    gap:*2rem;
+}
+.hero-content {
+    alig*-items: flex-end;
+}
+.eyebrow,
+.s*ction-label {
+    color: var(--acc*nt-light);
+    font-size: 0.78rem*
+    font-weight: 800;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+h1 {
+    margin: 0.25rem 0 0;
+    font-size:
+        clamp(3rem, 8vw, 6.2rem);
+    line-height: 0.95;
+    letter-spacing: -0.055em;
+}
+.subtitle {
+    margin: 1rem 0 0;
+    color: var(--accent);
+    font-size:
+        clamp(1.15rem, 2vw, 1.5rem);
+    font-weight: 700;
+}
+.location,
+.meta,
+.company,
+.intro > p,
+.skill-card p,
+.card p,
+footer p {
+    color: var(--muted);
+}
+.location {
+    margin-bottom: 0;
+}
+/* =========================================
+   Header Links
+   ========================================= */
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+.contact-links a,
+.footer-content a {
+    color: var(--text);
+    text-decoration: none;
+}
+.contact-links a {
+    padding: 0.7rem 1rem;
+    background:
+        rgba(69, 169, 255, 0.08);
+    border:
+        1px solid
+        rgba(69, 169, 255, 0.28);
+    border-radius: 999px;
+}
+.contact-links a:hover,
+.footer-content a:hover {
+    color: var(--accent-light);
+}
+/* =========================================
+   Main Layout
+   ========================================= */
+main {
+    padding: 4rem 0;
+}
+section {
+    margin-bottom: 4rem;
+}
+.card,
+.experience-card,
+.skill-card,
+.visitor-card {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(17, 35, 59, 0.95),
+            rgba(13, 26, 45, 0.95)
+        );
+    border:
+        1px solid var(--border);
+    box-shadow:
+        var(--shadow);
+}
+.card,
+.experience-card,
+.skill-card {
+    border-radius: 1.25rem;
+}
+/* =========================================
+   Profile
+   ========================================= */
+.intro {
+    display: grid;
+    grid-template-columns:
+        0.9fr 1.6fr;
+    gap: 3rem;
+    padding: 2.25rem;
+}
+.intro h2,
+.section-heading h2,
+.card h2 {
+    margin: 0.25rem 0 0;
+    line-height: 1.18;
+    letter-spacing: -0.025em;
+}
+.intro > p {
+    margin: 0;
+}
+/* =========================================
+   Section Headings
+   ========================================= */
+.section-heading {
+    margin-bottom: 1.25rem;
+}
+.section-heading p {
+    margin-bottom: 0.25rem;
+}
+.section-heading h2 {
+    font-size:
+        clamp(1.9rem, 4vw, 2.7rem);
+}
+/* =========================================
+   Experience
+   ========================================= */
+.experience-card {
+    padding: 1.8rem;
+    margin-bottom: 1rem;
+}
+.role-heading {
+    align-items: flex-start;
+}
+.role-heading h3 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+.company {
+    margin: 0.2rem 0 0;
+    font-weight: 650;
+}
+.meta {
+    margin: 0;
+    white-space: nowrap;
+}
+.experience-card ul {
+    margin: 1.2rem 0 0;
+    padding-left: 1.15rem;
+}
+.experience-card li {
+    margin: 0.55rem 0;
+}
+strong {
+    color: #ffffff;
+}
+/* =========================================
+   Skills
+   ========================================= */
+.skills-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+    gap: 1rem;
+}
+.skill-card {
+    padding: 1.4rem;
+}
+.skill-card h3 {
+    margin: 0 0 0.45rem;
+    font-size: 1rem;
+    color: var(--accent-light);
+}
+.skill-card p {
+    margin: 0;
+}
+/* =========================================
+   Certifications + Education
+   ========================================= */
+.credentials-grid {
+    display: grid;
+    grid-template-columns:
+        1fr 1fr;
+    gap: 1rem;
+}
+.credentials-grid .card {
+    padding: 1.8rem;
+}
+.clean-list {
+    padding-left: 1.15rem;
+    margin-bottom: 0;
+}
+.clean-list li {
+    margin: 0.45rem 0;
+}
+/* =========================================
+   Visitor Counter
+   ========================================= */
+.visitor-card {
+    border-radius: 1.25rem;
+    padding: 1.3rem 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-color:
+        rgba(69, 169, 255, 0.35);
+}
+.visitor-label {
+    color: var(--muted);
+}
+#counter {
+    color: var(--accent-light);
+    font-size: 1.15rem;
+}
+/* =========================================
+   Footer
+   ========================================= */
+footer {
+    border-top:
+        1px solid var(--border);
+    padding: 2rem 0 3rem;
+}
+.footer-content {
+    align-items: center;
+}
+.footer-content p {
+    margin: 0;
+}
+.footer-content a {
+    font-weight: 700;
+}
+/* =========================================
+   Mobile
+   ========================================= */
+@media (max-width: 760px) {
+  * .hero {
+        padding-top: 3.5r*m;
+    }
+    .hero-content,
+    *role-heading,
+    .footer-content *
+        flex-direction: column;
+ *  }
+    .hero-content {
+        *lign-items: flex-start;
+    }
+  * .intro,
+    .skills-grid,
+    .cr*dentials-grid {
+        grid-templ*te-columns: 1fr;
+    }
+    .intro {
+        gap: 1.4rem;
+    }
+    .meta {
+        white-space: normal;
+    }
+    .footer-content {
+        gap: 0.5rem;
+    }
+}
+
