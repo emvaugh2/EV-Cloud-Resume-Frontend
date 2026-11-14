@@ -1,0 +1,22 @@
+name: Deploy Frontend
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Azure Login
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: Upload Static Website Files
+        run: |
+          az storage blob upload-batch \
+            --account-name evcrcstorageaccount2026 \
+            --destination '$web' \
+            --source . \
+            --overwrite
