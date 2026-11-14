@@ -102,7 +102,8 @@ footer p {
     margin-bottom: 0;
 }
 .visitor-badge {
-    margin-top: 1.25rem;
+    margin-top: 0.75rem;
+    margin-bottom: 1rem;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
