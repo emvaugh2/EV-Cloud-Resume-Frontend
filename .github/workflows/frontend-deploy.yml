@@ -18,5 +18,6 @@ jobs:
           az storage blob upload-batch \
             --account-name evcrcstorageaccount2026 \
             --destination '$web' \
+            --auth-mode login \
             --source . \
             --overwrite
